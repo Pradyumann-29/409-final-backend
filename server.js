@@ -32,8 +32,12 @@ app.use(bodyParser.json());
 
 // Use routes as a module (see index.js)
 const routes = require ('./routes/index');
+
+app.get("/", (req, res) => {
+    res.send("Express on Vercel");
+  });
+  
 app.use('/', routes);
-module.exports = router;
 
 // Start the server
 app.listen(port);
