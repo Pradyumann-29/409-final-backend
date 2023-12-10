@@ -31,12 +31,12 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Use routes as a module (see index.js)
-const routes = require ('./routes/routes');
+const routes = require ('../routes/routes');
 
 app.get("/", (req, res) => {
     res.send("Express on Vercel");
   });
-
+  
 app.use('/', routes);
 
 // Start the server
